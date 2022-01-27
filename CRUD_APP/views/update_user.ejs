@@ -1,0 +1,70 @@
+
+<!-- include header -->
+<%- include('include/_header') %>
+<!-- /include header -->
+
+  <!-- Main Site -->
+  <main id="site-main">
+    <div class="container">
+        <div class="box-nav d-flex justify-between">
+           <div class="filter">
+               <a href="/"><i class="fas fa-angle-double-left"></i> All Entries</a>
+           </div>
+        </div>
+        <div class="form-title text-center">
+            <h2 class="text-dark">Update User</h2>
+            <span class="text-light">Use the below form to Update an Entry</span>
+        </div>
+
+        <!-- add user form -->
+         <!-- form handling -->
+ <form action="/api/users" method="POST" id="add_user">
+    <div class="new_user">
+        <div class="form-group">
+            <label for="Yourname" class="text-light">Your Name</label>
+            <input type="hidden" name="id" value="">
+            <input type="text" name="Yourname" value="" placeholder="Ferris Bueller">
+        </div>
+          <div class="form-group">
+            <label for="HrName" class="text-light">Hr name</label>
+            <input type="text" name="Hrname" value="" placeholder="Mclovin">
+        </div>
+       
+        <div class="form-group">
+            <label for="URL" class="text-light">URL</label>
+            <input type="text" name="URL" value="" placeholder="https://www.linkedin.com/in/nag-srikesh-8327661b4/">
+        </div>
+        <div class="form-group">
+
+        <label for="OrganisationName" class="text-light">Organisation Name</label>
+            <input type="hidden" name="id" value="">
+            <input type="text" name="Organisationname" value="" placeholder="Microsoft">
+        </div>
+      
+
+        <div class="form-group">
+            <label for="ConfirmationStatus" class="text-light">Status</label>
+            <div class="radio inline">
+                <input type="radio" id="radio-4" name="ConfirmationStatus" value="Confirmed" >
+                <label for="radio-4" class="radio-label">Confirmed</label>
+            </div>
+            <div class="radio inline">
+                <input type="radio" id="radio-5" name="ConfirmationStatus" value="Not Confirmed" >
+                <label for="radio-5" class="radio-label">Not Confirmed</label>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <button type="submit" class="btn text-dark update">Save</button>
+        </div>
+
+    </div>
+</form>
+
+    </div>
+</main>
+<!-- /Main Site -->
+
+<!-- include footer -->
+<%- include('include/_footer') %>
+<!-- /include footer -->
